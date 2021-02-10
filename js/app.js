@@ -5,3 +5,9 @@ var hotel= {
 };
 
 
+document.getElementById('name-hotel').innerHTML = "Hotel " + hotel.name;
+document.getElementById('location-hotel').innerHTML = "Ubicado en " + hotel.location;
+document.getElementById('img-hotel').scr = hotel.img;
+
+var puntua = prompt("¿Cuál es la puntuación que le das al hotel?");
+document.getElementById('puntuacion').innerHTML = puntua;
