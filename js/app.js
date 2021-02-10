@@ -7,7 +7,10 @@ var hotel= {
 
 document.getElementById('name-hotel').innerHTML = "Hotel " + hotel.name;
 document.getElementById('location-hotel').innerHTML = "Ubicado en " + hotel.location;
-document.getElementById('img-hotel').scr = hotel.img;
+document.getElementById('img-hotel').src = hotel.img;
 
 var puntua = prompt("¿Cuál es la puntuación que le das al hotel?");
-document.getElementById('puntuacion').innerHTML = puntua;
+document.getElementById('puntuacion').innerHTML = puntua + " estrellas";
+
+var anonimo = confirm("¿Quieres que tu reseña sea anónima?");
+document.getElementById('anonima').checked = anonimo;
