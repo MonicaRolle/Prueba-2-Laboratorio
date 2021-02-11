@@ -34,9 +34,20 @@ var hoteles = {
 };
 
 var eleccion = prompt("¿Que hotel quiere puntuar? Vincci, Rui o Eurostars");
-document.getElementById('name-hotel').innerHTML = hoteles[eleccion].name;
-document.getElementById('location-hotel').innerHTML = hoteles[eleccion].location;
+document.getElementById('name-hotel').innerHTML = "Hotel " +hoteles[eleccion].name;
+document.getElementById('location-hotel').innerHTML = "Ubicando en " + hoteles[eleccion].location;
 document.getElementById('img-hotel').src = hoteles[eleccion].img;
+
+var estrellas = {
+    1 : "<span>&#9733;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>",
+    2 : "<span>&#9733;</span><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>",
+    3 : "<span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>",
+    4 : "<span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>",
+    5 : "<span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>",
+};
+
+var estrella = prompt("¿Cuál es tu puntuación del hotel "+ eleccion +"?");
+document.getElementById('puntuacion').innerHTML = estrellas[estrella];
 
 var anonimo = confirm("¿Quieres que tu reseña sea anónima?");
 document.getElementById('anonima').checked = anonimo;
